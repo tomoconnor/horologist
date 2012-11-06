@@ -1,0 +1,37 @@
+
+global_output_to:   tom@twinhelix.org
+global_output_mode:  M
+
+---
+jobname:    DateSender
+description:    Send the date to Tom every hour.
+crontime:    nil
+seconds:    0
+minutes:    0
+hours:     *
+day_of_month: *
+month:    *
+day_of_week:    *
+run_as:    root
+enabled:    true
+command:    date
+output_mode: @inherit
+output_to: @inherit
+
+---
+jobname:    HasMySiteGoneDown
+description:    Check the state of twinhelix.org, every 30 minutes.
+crontime:    nil
+seconds:    0
+minutes:    0,30
+hours:     *
+day_of_month: *
+month:    *
+day_of_week:    *
+run_as:    root
+enabled:    true
+command:    date
+output_mode: @inherit
+output_to: @inherit
+
+
